@@ -2,66 +2,30 @@ body
 {
 	font-family: 'Manrope', sans-serif;
 }
-#navbar {
-  overflow: hidden;
-  background-color: #313B44;
-  padding: 20px 10px; /* Large padding which will shrink on scroll (using JS) */
-  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-  position: fixed; /* Sticky/fixed navbar */
-  width: 100%;
-  top: 0; /* At the top */
-  z-index: 99;
-}
 
-/* Style the navbar links */
-#navbar a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+#mainNavbar .navbar-brand
+{
+	color:#70B8F8;
+	font-weight: 200 !important;
+	
 }
-
-/* Style the logo */
-#navbar #logo {
-  font-size: 20px;
-  font-weight: bold;
-  transition: 0.4s;
+#mainNavbar .nav-link
+{
+	float:right;
+	color: white;
 }
-
-/* Links on mouse-over */
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
+#mainNavbar .nav-link:hover
+{
+	color:red;
 }
-
-/* Style the active/current link */
-#navbar a.skills {
-  background-color: dodgerblue;
-  color: white;
+#mainNavbar
+{
+	font-size: 1.2rem;
+	font-weight: 200;
 }
-
-/* Display some links to the right */
-#navbar-right {
-  float: right;
-}
-
-/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 580px) {
-  #navbar {
-    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
-  }
-  #navbar a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  #navbar-right {
-    float: none;
-  }
+.navbar.scrolled {
+    background: #323334;
+    transition: background 300ms;
 }
 /*============================================]*/
 #about {

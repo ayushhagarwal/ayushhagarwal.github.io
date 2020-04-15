@@ -9,15 +9,29 @@
 	<link rel="stylesheet" type="text/css" href="assets/profile.css">
 </head>
 <body >
-<div id="navbar">
-  <a href="#logo"id="logo"><i class="fas fa-home"></i> Home</a>
-  <div id="navbar-right">
-  	<a href="#about"><i class="fas fa-male"></i>About</a>
-    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
-    <a href="#contact"><i class="fas fa-id-badge"></i> Contact</a>
+	<nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark  py-5 fixed-top">
+  <a class="navbar-brand" href="#"><i class="fas fa-home"></i> Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#about"><i class="fas fa-male"></i> About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact"><i class="fas fa-id-badge"></i> Contact</a>
+      </li>
+    </ul>
     
   </div>
-</div>
+</nav>
+
 <!-- Masthead -->
 <div class="ayush">
 <header class="masthead bg-primary text-white text-center">
@@ -64,7 +78,7 @@
           <p class="lead">I love coding and developing new things. Also interested in almost anything which relate to technology. Hustling everyday to bring technology driven transformation around us.</p>
         </div>
       </div>
-      <p class="text-center mt-4"><h4 class="text-center mt-4">Stuffs I am interested in</h4></p>
+      <p class="text-center mt-4"><h4 class="text-center mt-4">Things that keep me engaged:</h4></p>
       <div class="row container">
       <div class="col-lg-3 ">
         <h3 class="text-center mt-4"><i class="fas fa-laptop-code"></i></h3>
@@ -79,12 +93,12 @@
       <div class="col-lg-3 ">
       	<h3 class="text-center mt-4" ><i class="fab fa-java"></i></i></h3>
       	<h3 class="text-center mt-4">Comp. Coding</h3>
-      	<p>This is from where I got into coding and has been in love with it from the past two years. Presently experienced in Java Programming looking to learning new languages in future.</p>
+      	<p>This is from where I got into coding and has been in love with it from the past two years. Presently experienced in Java Programming, looking forward to learn new languages in future.</p>
       </div>
       <div class="col-lg-3 ">
       	<h3 class="text-center mt-4"><i class="fas fa-pencil-alt"></i></h3>
       	<h3 class="text-center mt-4">Blogging</h3>
-      	<p>Something I jump onto when the bugs bug me. Blogggin keeps me curious about new information and is the great medium of sharing my thoughts</p>
+      	<p>Something I jump onto when the bugs bug me. Bloggging keeps me curious about new information and is the great medium of sharing my thoughts</p>
       </div>
   </div>
       <p class="text-center mt-4">Push the button below for more.</p>
@@ -220,11 +234,22 @@
     </div>
   </section>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-<!-- Custom scripts for this template -->
-  <script src="assets/profile.js"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
 </body>
 </html>
