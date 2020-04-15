@@ -56,9 +56,14 @@ body
 {
 	height:40px;
 }
+.fir
+{
+	margin-right: 25px;
+}
 .ski
 {
 	list-style: none;
+	margin-right: 30px;
 }
 .photo
 {
@@ -186,8 +191,8 @@ body
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 5.25rem;
+  height: 5.25rem;
   font-size: 3.25rem;
   justify-content: center;
   align-items: center;
