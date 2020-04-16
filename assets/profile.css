@@ -13,14 +13,24 @@ body
 	font-weight: 200 !important;
 	
 }
-#mainNavbar .nav-link
+#mainNavbar .nav-link 
 {
 	float:right;
 	color: white;
 }
-#mainNavbar .nav-link:hover
+#mainNavbar .nav-link:after
 {
-	color:red;
+     content:' ';
+     display:block;
+     width:0;
+     height:4px;
+     background:black;
+     transition: width .3s;
+}
+#mainNavbar .nav-link:hover:after
+{
+	width:100%;
+	transition: width .3s;
 }
 #mainNavbar
 {
@@ -147,7 +157,9 @@ body
   color: #fff !important;
 }
 .page-section {
-  padding: 6rem 0;
+  padding: 8rem 0;
+  display: flex;
+  height: 100%;
 }
 
 .page-section .page-section-heading {
