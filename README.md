@@ -16,14 +16,13 @@ Anyone who wants to build their website for a agood impression on employers or j
 
 * Clone the repo in your local device and just open the index.html file using any web browser.
 <br>
-##If you want to make any changes in the main web page contents,open the index.html file using any text editor a notepad would also work,(although I would suggest a good text editor as it helps in syntax suggestions),then just go on and make the changes you want to.
-##To make any styling changes just go to the assests folder and open the css file using the same text editor and make changes as you wish.
+If you want to make any changes in the main web page contents,open the index.html file using any text editor a notepad would also work,(although I would suggest a good text editor as it helps in syntax suggestions),then just go on and make the changes you want to.
+<br>
+To make any styling changes just go to the assests folder and open the css file using the same text editor and make changes as you wish.
 
 ## Github Hosting-
-<br>
 Make a repository with the name format as- yourusername.github.io and just commit to the master. Your website is hosted.
 
 ## Contribute-
 Feel free to clone the repo and suggest any new improvements and designs.
-<br>
 Also please star the repo to appreciate my effort.
