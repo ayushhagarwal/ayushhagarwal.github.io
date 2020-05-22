@@ -57,6 +57,9 @@ body
 #skills {
   background-color: darkcyan !important;
 }
+#blog{
+  background-color: #BB541A !important;
+}
 #contact{
   background-color: tomato !important;
 }
@@ -255,4 +258,38 @@ body
 {
   padding-top: 2rem;
   margin: 1rem;
+}
+/*================*/
+.blog1{
+  padding-left: 10rem;
+}
+.blog2{
+  padding-left: 10rem;
+}
+.card{
+  background-color: gray;
+}
+.featured{
+  text-align: center;
+  padding-top: 5rem;
+  font-weight: 700;
+}
+.lead1
+{
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-top: 5rem;
+}
+.blogger{
+  padding-left: 20rem;
+}
+.blogger a{
+  color:black;
+}
+.quora{
+  padding-left: 10rem;
+}
+.quora a{
+  color:black;
 }
