@@ -6,7 +6,7 @@ body
 {
 	font-family: 'Manrope', sans-serif;
 }
-
+/*------------------------------------------------NAVBAR CSS--------------------------------------------------------------*/
 #mainNavbar .navbar-brand
 {
 	color:#70B8F8;
@@ -29,12 +29,12 @@ body
 }
 #mainNavbar .nav-link:after
 {
-     content:' ';
-     display:block;
-     width:0;
-     height:4px;
-     background:black;
-     transition: width .3s;
+   content:' ';
+   display:block;
+   width:0;
+   height:4px;
+   background:black;
+   transition: width .3s;
 }
 #mainNavbar .nav-link:hover:after
 {
@@ -50,7 +50,7 @@ body
     background: #323334;
     transition: background 300ms;
 }
-/*============================================]*/
+/*----------------------------------------------------------------------------------------------------------------*/
 #about {
   background-color: black !important;
 }
@@ -66,7 +66,6 @@ body
 .bg-primary {
   background-image: url("https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");!important;
   height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -83,10 +82,6 @@ body
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
-}
-.navbar
-{
-	height:40px;
 }
 .fir
 {
@@ -172,11 +167,13 @@ body
   padding: 8rem 0;
   display: flex;
   height: 100%;
+
 }
 
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
+  margin-top: 5rem;
 }
 @media (min-width: 992px) {
   .page-section .page-section-heading {
@@ -232,9 +229,7 @@ body
   font-size: 3.25rem;
   justify-content: center;
   align-items: center;
-
 }
-
 .conn
 {
 	text-align: center;
@@ -259,13 +254,7 @@ body
   padding-top: 2rem;
   margin: 1rem;
 }
-/*================*/
-.blog1{
-  padding-left: 10rem;
-}
-.blog2{
-  padding-left: 10rem;
-}
+/*---------------------------------------------Blogs Section---------------------------------------------------*/
 .card{
   background-color: gray;
 }
@@ -281,15 +270,11 @@ body
   font-size: 2rem;
   padding-top: 5rem;
 }
-.blogger{
-  padding-left: 20rem;
+.content-links{
+  display: flex;
+  justify-content: center;
 }
-.blogger a{
-  color:black;
-}
-.quora{
-  padding-left: 10rem;
-}
-.quora a{
+.content-links a{
+  padding:2rem;
   color:black;
 }
