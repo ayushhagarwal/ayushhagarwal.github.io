@@ -1,7 +1,7 @@
 ## Web Portfolio
 This repository gives you the best possible help in creating your website.You can add modify anything related to your career right from the start.
 <br>
-Anyone who wants to build their website for a agood impression on employers or just want to show their skills and accomplishment should create their website. And this repo would be of perfect assistance.
+Anyone who wants to build their website to show their skills and accomplishment via web should create their own personal website. And this repo would be of perfect assistance as a starting point.
 <br>
 ## Tech Stack-
 * HTML 5
