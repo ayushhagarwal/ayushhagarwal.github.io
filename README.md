@@ -1,7 +1,9 @@
 ## Web Portfolio
-This repository gives you the best possible help in creating your website.You can add modify anything related to your career right from the start.
+This project is my personal website wherein it contains all the details of my professional work.
 <br>
-Anyone who wants to build their website for a agood impression on employers or just want to show their skills and accomplishment should create their website. And this repo would be of perfect assistance.
+Check out the site hosted at : https://ayushhagarwal.github.io/ using github pages.
+<br>
+Anyone who wants to build their website to show their skills and accomplishment via web should create their own personal website. And this repo would be of perfect assistance as a starting point.
 <br>
 ## Tech Stack-
 * HTML 5
