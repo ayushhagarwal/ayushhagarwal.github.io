@@ -11,38 +11,50 @@
   <link rel="stylesheet" type="text/css" href="assets/profile.css">
 </head>
 <body >
-	<nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark  py-5 fixed-top">
-    <a class="navbar-brand" href="#"><i class="fas fa-home fa-2x"></i> Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html"><i class="fas fa-laptop-code fa-lg"></i> Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about"><i class="fas fa-male fa-lg"></i> About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills"><i class="fas fa-cogs fa-lg"></i> Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact"><i class="fas fa-id-badge fa-lg"></i> Contact</a>
-        </li> 
-      </ul>
+  <header>
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
     </div>
-  </nav>
 
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav__item active">
+          <a href="index.html" class="menu-nav__link">
+            Home
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="projects.html" class="menu-nav__link">
+            Projects
+          </a>
+        </li>
+        <li class="menu-nav__item">
+        <a href="#about" class="menu-nav__link">
+          About Me
+        </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="#skills" class="menu-nav__link">
+          Skills
+        </a>
+      </li>
+      <li class="menu-nav__item">
+        <a href="#contact" class="menu-nav__link">
+          Contact Me
+        </a>
+      </li>
+      </ul>
+    </nav>
+  </header>
 <!-- Masthead -->
-  <div>
+  <div class="top-section">
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image -->
         <img class="masthead-avatar mb-5 photo" src="img/avataaars.svg" alt="avatar-image">
         <!-- Masthead Heading -->
-        <h1 class="masthead-heading text-uppercase mb-0">Ayush Kumar Agarwal</h1>
-        <h4 >Web Developer || Technical Blogger</h4>
+        <p class="my_name">Ayush Kumar Agarwal</p>
+        <p class="desc">Web Developer || Technical Blogger</p>
         <!-- Icon Divider -->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
@@ -56,9 +68,10 @@
       </div>
     </header>
   </div>
+
 <!-- About Me Section -->
 
-  <section class="page-section  text-white mb-0" id="about">
+  <section class="page-section text-white mb-0" id="about">
 	  <div class="container">
       <!-- About Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
@@ -112,7 +125,7 @@
       </div>
     </div>
   </section>
-<section class="page-section  text-white mb-0" id="skills">
+<section class="page-section text-white mb-0" id="skills">
 	<div class="container">
       <!-- About Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-white">SKILLS</h2>
@@ -217,8 +230,8 @@
         </div>
         <div class="col-lg-6 text-center mt-4 soc">
         	<h4 class="text-uppercase ">Location</h4>
-          <p class="lead ">Mens Hostel,VIT
-            <br>Vellore,632014,India,Tamil Nadu</p>
+          <p class="lead ">Sector-9 , Bokaro
+            <br>Jharkhand , 827009, India</p>
         </div>
 
         
@@ -240,6 +253,8 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="assets/profile.js"></script>
+    <!-- <script src="assets/profile.js"></script> -->
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 </html>
