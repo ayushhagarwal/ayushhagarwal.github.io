@@ -13,7 +13,7 @@ body {
   padding: 0;
 }
 /*------------------------------------------------NAVBAR CSS--------------------------------------------------------------*/
-.header1{
+.header1 {
   position: fixed;
   z-index: 2;
   width: 100%;
@@ -186,26 +186,37 @@ body {
   background-color: #9d4635 !important;
 }
 .my_name {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 4px;
   animation-name: myname;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-@keyframes myname{
-  0%{transform:scale(1.5)};
+@keyframes myname {
+  0% {
+    transform: scale(1.5);
+  }
 }
 .desc {
-  font-size: 1.6rem;
-  font-weight: 600;
-  animation-name: desc;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  font-weight: 200;
+  margin: 0.4em 0;
+  font-size: 2.2em;
+  color: #fff;
 }
-@keyframes desc{
-  
-  0%{transform: rotateX(180deg)};
+.coffee {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.about_desc {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 1.2rem;
+}
+@keyframes desc {
+  0% {
+    transform: rotateX(180deg);
+  }
 }
 .bg-primary {
   background-image: url("./image.jpg");
