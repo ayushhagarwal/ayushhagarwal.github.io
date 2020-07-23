@@ -191,7 +191,7 @@ body {
   letter-spacing: 4px;
   animation-name: myname;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 @keyframes myname {
   0% {
