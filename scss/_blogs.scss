@@ -17,8 +17,13 @@
     justify-content: flex-end;
 
     .text-secondary {
-      font-size: 4rem;
-      margin-bottom: 2rem;
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+    }
+    p{
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -32,7 +37,7 @@
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4rem;
-  padding: 4rem;
+  padding: 1rem;
   margin: 0 auto;
   width: max-content;
 }
@@ -44,8 +49,8 @@
       rgba(0, 0, 0, var(--bg-filter-opacity))
     ),
     var(--bg-img);
-  height: 20em;
-  width: 15em;
+  height: 18em;
+  width: 13em;
   font-size: 1.1em;
   color: white;
   border-radius: 1em;
@@ -58,37 +63,46 @@
   transition: all, var(--transition-time);
   position: relative;
   overflow: hidden;
-  border: 10px solid #ccc;
+  border: 6px solid #ccc;
   text-decoration: none;
 
   h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.2em;
   }
 
   p {
-    font-size: 0.75em;
+    font-size: 0.79em;
     font-family: "Open Sans";
     margin-top: 0.5em;
-    line-height: 2em;
+    line-height: 1.6em;
+    font-weight: 600;
   }
   .tags{
     display:flex;
   }
+  .tags .tag {
+    font-size: 0.75em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, var(--transition-time);
+  }
+  .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: 0.8;
+  }
 }
 .card:hover {
   transform: rotate(0);
-}
-
-.card .tags .tag {
-  font-size: 0.75em;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 0.3rem;
-  padding: 0 0.5em;
-  margin-right: 0.5em;
-  line-height: 1.5em;
-  transition: all, var(--transition-time);
 }
 
 .card:hover .tags .tag {
@@ -96,15 +110,6 @@
   color: white;
 }
 
-.card .date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.75em;
-  padding: 1em;
-  line-height: 1em;
-  opacity: 0.8;
-}
 
 .card:before,
 .card:after {
