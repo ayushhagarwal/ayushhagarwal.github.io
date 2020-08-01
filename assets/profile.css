@@ -84,10 +84,11 @@ body {
 .nav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0rem;
   width: 100vw;
   opacity: 0.98;
   visibility: hidden;
+  /* background-color: aqua; */
 }
 
 .nav.open {
@@ -145,7 +146,7 @@ body {
   color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   font-weight: 300;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
