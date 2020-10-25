@@ -241,9 +241,15 @@ body {
   margin-right: 25px;
   margin-top: 25px;
 }
+.skills-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px #272727;
+}
 .ski {
   list-style: none;
-  margin-right: 30px;
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 .photo {
   margin-top: 100px;
