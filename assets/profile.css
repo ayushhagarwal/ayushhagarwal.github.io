@@ -252,6 +252,9 @@ body {
   font-size: 1.5rem;
   /* margin-bottom: 20px; */
 }
+.skill{
+  margin-bottom: 1.8rem;
+}
 .photo {
   margin-top: 100px;
   height: 200px;
