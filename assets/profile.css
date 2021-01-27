@@ -246,10 +246,11 @@ body {
   font-weight: 700;
   text-shadow: 2px 2px #272727;
 }
-.ski {
+.skills-list {
   list-style: none;
   margin-right: 10px;
   font-size: 1.5rem;
+  /* margin-bottom: 20px; */
 }
 .photo {
   margin-top: 100px;
