@@ -178,7 +178,17 @@ body {
 
 /*----------------------------------------------------------------------------------------------------------------*/
 #about {
-  background-color: black !important;
+  background-color: rgb(21, 40, 49) !important;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.about-image {
+  width: 5px;
+  height: 5px;
+  opacity: 0.3;
 }
 #skills {
   background-color: #0c3d3d !important;
@@ -252,7 +262,7 @@ body {
   font-size: 1.5rem;
   /* margin-bottom: 20px; */
 }
-.skill{
+.skill {
   margin-bottom: 1.8rem;
 }
 .photo {
@@ -409,10 +419,7 @@ body {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
-.Interest {
-  padding-top: 2rem;
-  margin: 1rem;
-}
+
 /*---------------------------------------------Blogs Section---------------------------------------------------*/
 @media screen and (min-width: 768px) {
   .menu-btn {
