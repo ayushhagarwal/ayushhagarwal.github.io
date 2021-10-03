@@ -1,3 +1,4 @@
+/* Standard CSS */
 html,
 body {
   max-width: 100%;
@@ -175,7 +176,94 @@ body {
   -webkit-transition-delay: 0.55s;
   transition-delay: 0.55s;
 }
+/*--------------------------------------------------Dividers CSS-------------------------------------------------------*/
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+  border-color: #2c3e50 !important;
+}
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
 
+.divider-custom .divider-custom-icon {
+  color: #2c3e50 !important;
+  font-size: 2rem;
+}
+.divider-custom.divider-light .divider-custom-line {
+  background-color: #fff;
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+  color: #fff !important;
+}
+.divider-custom {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+  border-color: #2c3e50 !important;
+}
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+  color: #2c3e50 !important;
+  font-size: 2rem;
+}
+
+.divider-custom.divider-light .divider-custom-line {
+  background-color: #fff;
+}
+.divider-custom.divider-light .divider-custom-icon {
+  color: #fff !important;
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Intro Section with Picture--------------------------------------------*/
+.top-section {
+  height: 100vh;
+}
+.my_name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  animation-name: myname;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+.desc {
+  font-weight: 200;
+  margin: 0.4em 0;
+  font-size: 2.2em;
+  color: #fff;
+}
 /*----------------------------------------------------------------------------------------------------------------*/
 #about {
   background-color: rgb(21, 40, 49) !important;
@@ -200,25 +288,7 @@ body {
 #contact {
   background-color: #c57251 !important;
 }
-.my_name {
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 4px;
-  animation-name: myname;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-}
-@keyframes myname {
-  0% {
-    transform: scale(1.5);
-  }
-}
-.desc {
-  font-weight: 200;
-  margin: 0.4em 0;
-  font-size: 2.2em;
-  color: #fff;
-}
+
 .coffee {
   font-size: 1.5rem;
   font-weight: 700;
@@ -261,9 +331,7 @@ body {
   height: 200px;
   width: 200px;
 }
-.top-section {
-  height: 100vh;
-}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -294,39 +362,7 @@ body {
     max-width: 1140px;
   }
 }
-.divider-custom {
-  margin: 1.25rem 0 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.divider-custom .divider-custom-line {
-  width: 100%;
-  max-width: 7rem;
-  height: 0.25rem;
-  background-color: #2c3e50;
-  border-radius: 1rem;
-  border-color: #2c3e50 !important;
-}
-.divider-custom .divider-custom-line:first-child {
-  margin-right: 1rem;
-}
-.divider-custom .divider-custom-line:last-child {
-  margin-left: 1rem;
-}
 
-.divider-custom .divider-custom-icon {
-  color: #2c3e50 !important;
-  font-size: 2rem;
-}
-.divider-custom.divider-light .divider-custom-line {
-  background-color: #fff;
-}
-
-.divider-custom.divider-light .divider-custom-icon {
-  color: #fff !important;
-}
 .page-section {
   padding: 8rem 0;
   display: flex;
@@ -342,41 +378,6 @@ body {
     font-size: 3rem;
     line-height: 2.5rem;
   }
-}
-.divider-custom {
-  margin: 1.25rem 0 1.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.divider-custom .divider-custom-line {
-  width: 100%;
-  max-width: 7rem;
-  height: 0.25rem;
-  background-color: #2c3e50;
-  border-radius: 1rem;
-  border-color: #2c3e50 !important;
-}
-.divider-custom .divider-custom-line:first-child {
-  margin-right: 1rem;
-}
-
-.divider-custom .divider-custom-line:last-child {
-  margin-left: 1rem;
-}
-
-.divider-custom .divider-custom-icon {
-  color: #2c3e50 !important;
-  font-size: 2rem;
-}
-
-.divider-custom.divider-light .divider-custom-line {
-  background-color: #fff;
-}
-.divider-custom.divider-light .divider-custom-icon {
-  color: #fff !important;
 }
 
 .btn-xl {
