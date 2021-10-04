@@ -176,6 +176,30 @@ body {
   -webkit-transition-delay: 0.55s;
   transition-delay: 0.55s;
 }
+/*---------------------------------------------Navbar Responsive---------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav__link {
+    font-size: 1.5rem;
+  }
+}
 /*--------------------------------------------------Dividers CSS-------------------------------------------------------*/
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
@@ -250,6 +274,18 @@ body {
 .top-section {
   height: 100vh;
 }
+.bg-primary {
+  background-image: url("./image.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo {
+  margin-top: 100px;
+  height: 200px;
+  width: 200px;
+}
 .my_name {
   font-size: 2.5rem;
   font-weight: 600;
@@ -258,6 +294,10 @@ body {
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
+.coffee {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 .desc {
   font-weight: 200;
   margin: 0.4em 0;
@@ -265,73 +305,15 @@ body {
   color: #fff;
 }
 /*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------About Section-------------------------------------------------*/
 #about {
   background-color: rgb(21, 40, 49) !important;
 }
-.about-content {
+.page-section {
+  padding: 8rem 0;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.about-image {
-  width: 5px;
-  height: 5px;
-  opacity: 0.3;
-}
-#skills {
-  background-color: #0c3d3d !important;
-}
-.skills-name {
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#contact {
-  background-color: #c57251 !important;
-}
-
-.coffee {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.about_desc {
-  text-align: center;
-  margin-top: 4px;
-  font-size: 1.2rem;
-}
-@keyframes desc {
-  0% {
-    transform: rotateX(180deg);
-  }
-}
-.bg-primary {
-  background-image: url("./image.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.soc {
-  padding-top: 40px;
-}
-
-.lead {
-  text-align: center;
-}
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-.fir {
-  margin-right: 25px;
-  margin-top: 25px;
-}
-
-.photo {
-  margin-top: 100px;
-  height: 200px;
-  width: 200px;
-}
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -362,12 +344,6 @@ body {
     max-width: 1140px;
   }
 }
-
-.page-section {
-  padding: 8rem 0;
-  display: flex;
-  height: 100%;
-}
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
@@ -378,6 +354,49 @@ body {
     font-size: 3rem;
     line-height: 2.5rem;
   }
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.about-image {
+  width: 5px;
+  height: 5px;
+  opacity: 0.3;
+}
+.lead {
+  text-align: center;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+/*--------------------------------------------------Skills Section-------------------------------------------------*/
+#skills {
+  background-color: #0c3d3d !important;
+}
+.skills-name {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@keyframes desc {
+  0% {
+    transform: rotateX(180deg);
+  }
+}
+
+.skill-icon {
+  padding-top: 40px;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------Contact Section-------------------------------------------------*/
+#contact {
+  background-color: #c57251 !important;
+}
+.fir {
+  margin-right: 25px;
+  margin-top: 25px;
 }
 
 .btn-xl {
@@ -393,9 +412,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.conn {
-  text-align: center;
-}
 .mx-1 {
   margin-right: 0.25rem !important;
   margin-left: 0.25rem !important;
@@ -410,29 +426,4 @@ body {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
-}
-
-/*---------------------------------------------Blogs Section---------------------------------------------------*/
-@media screen and (min-width: 768px) {
-  .menu-btn {
-    visibility: hidden;
-  }
-  .nav {
-    visibility: visible;
-  }
-  .nav .menu-nav {
-    display: block;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    height: 100%;
-    background: transparent;
-    text-align: right;
-  }
-  .nav .menu-nav__item {
-    display: inline;
-    padding-right: 1.5rem;
-  }
-  .nav .menu-nav__link {
-    font-size: 1.5rem;
-  }
 }
