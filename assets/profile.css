@@ -3,10 +3,11 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
-body {
-  font-family: "Manrope", sans-serif;
-}
+/* body {
+  font-family: "Poppins", sans-serif;
+} */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -287,6 +288,7 @@ body {
   width: 200px;
 }
 .my_name {
+  font-family: "Bangers", cursive;
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 4px;
@@ -294,9 +296,10 @@ body {
   animation-duration: 2s;
   animation-iteration-count: 1;
 }
-.coffee {
-  font-size: 1.5rem;
-  font-weight: 700;
+.quote {
+  font-size: 2.1rem;
+  font-weight: 300;
+  text-align: center;
 }
 .desc {
   font-weight: 200;
@@ -360,17 +363,14 @@ body {
   flex-direction: row;
   justify-content: flex-start;
 }
-.about-image {
+/* .about-image {
   width: 5px;
   height: 5px;
   opacity: 0.3;
-}
+} */
 .lead {
   text-align: center;
-}
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.5rem;
 }
 /*--------------------------------------------------Skills Section-------------------------------------------------*/
 #skills {
