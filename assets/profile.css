@@ -4,15 +4,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   overscroll-behavior: none;
-}
-/* body {
-  font-family: "Poppins", sans-serif;
-} */
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 /*------------------------------------------------NAVBAR CSS--------------------------------------------------------------*/
 .header1 {
@@ -21,65 +15,42 @@ body {
   width: 100%;
   padding: 1rem;
 }
-.menu-btn {
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
   position: absolute;
-  z-index: 1;
-  right: 1rem;
-  top: 1rem;
-  height: 20px;
   width: 28px;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
+  height: 3px;
+  background: #fff;
   transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger {
-  position: absolute;
   right: 0;
   top: 0.5rem;
-  width: 28px;
-  height: 3px;
-  background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::before {
   content: "";
-  position: absolute;
   top: -8px;
-  width: 28px;
-  height: 3px;
-  background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger::after {
   content: "";
-  position: absolute;
   top: 8px;
   width: 20px;
-  height: 3px;
-  background: #fff;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn__burger.open {
-  -webkit-transform: rotate(720deg);
   transform: rotate(720deg);
   background: transparent;
 }
 
 .menu-btn__burger.open::before {
-  -webkit-transform: rotate(45deg) translate(5px, 8px);
   transform: rotate(45deg) translate(5px, 8px);
 }
 
 .menu-btn__burger.open::after {
-  width: 28px;
-  -webkit-transform: rotate(-45deg) translate(3px, -7px);
   transform: rotate(-45deg) translate(3px, -7px);
 }
 
@@ -90,7 +61,6 @@ body {
   width: 100vw;
   opacity: 0.98;
   visibility: hidden;
-  /* background-color: aqua; */
 }
 
 .nav.open {
@@ -394,12 +364,12 @@ body {
   justify-content: space-between;
 }
 .card {
-  margin: 20px;
-  padding: 20px;
+  margin: 12px;
+  padding: 12px;
   width: 500px;
-  min-height: 200px;
+  min-height: 100px;
   display: grid;
-  grid-template-rows: 20px 50px 1fr 50px;
+  grid-template-rows: 10px 25px 1fr 25px;
   border-radius: 10px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
@@ -422,17 +392,16 @@ body {
 
 .card__icon {
   grid-row: 1/3;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .card__title {
   grid-row: 3/4;
-  font-weight: 400;
+  font-weight: 600;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .internship-description {
-  line-height: 0rem;
   font-size: 15px;
 }
 
