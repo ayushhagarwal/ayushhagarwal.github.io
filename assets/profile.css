@@ -286,7 +286,7 @@ body {
 /*----------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------About Section-------------------------------------------------*/
 #about {
-  background-color: rgb(21, 40, 49) !important;
+  background-color: #29A0B1 !important;
 }
 .page-section {
   padding: 8rem 0;
@@ -324,7 +324,7 @@ body {
   }
 }
 .page-section .page-section-heading {
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 2rem;
   /* margin-top: 0.rem; */
 }
@@ -339,13 +339,9 @@ body {
   flex-direction: row;
   justify-content: flex-start;
 }
-/* .about-image {
-  width: 5px;
-  height: 5px;
-  opacity: 0.3;
-} */
+
 .lead {
-  text-align: left;
+  text-align: center;
   font-size: 1.3rem;
 }
 .lead-1 {
@@ -421,7 +417,7 @@ body {
 
 /*--------------------------------------------------Skills Section-------------------------------------------------*/
 #skills {
-  background-color: #0c3d3d !important;
+  background-color: #167D7F !important;
 }
 .skills-name {
   font-size: 20px;
@@ -441,7 +437,7 @@ body {
 /*----------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------Contact Section-------------------------------------------------*/
 #contact {
-  background-color: #c57251 !important;
+  background-color: #98D7C2 !important;
 }
 .fir {
   margin-right: 25px;
