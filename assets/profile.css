@@ -115,7 +115,7 @@ body {
 
 .nav .menu-nav__link {
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 1rem;
@@ -241,53 +241,90 @@ body {
   color: #fff !important;
 }
 /*------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------Intro Section with Picture--------------------------------------------*/
+/*--------------------------------------------------Intro Section--------------------------------------------*/
 .top-section {
-  height: 100vh;
+  text-align: left;
+  padding-top: 200px;
+  padding-left: 300px;
+  
 }
+
+.intro {
+  font-size:xxx-large;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.highlight {
+  color: #b2d8d8; 
+}
+
+.about-new{
+  width: 80%;
+  font-weight: 300;
+}
+
+
 @media (max-width: 360px) {
   .top-section {
     height: 125vh;
   }
 }
 
-.bg-primary {
-  background-image: url("./image.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Skills */
+
+.card-section {
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 200px;
+  background-color: #48cae4;
+  padding: 80px;
+  border-radius: 10px;
+  color: #000;
 }
-.photo {
-  margin-top: 100px;
-  height: 200px;
-  width: 200px;
+
+.card-section h2 {
+  margin-top: 0;
 }
-.my_name {
-  font-family: "Bangers", cursive;
-  font-size: 2.5rem;
-  font-weight: 600;
-  letter-spacing: 4px;
-  animation-name: myname;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
+
+.card-section p {
+  margin-bottom: 10px;
 }
-.quote {
-  font-size: 2.1rem;
-  font-weight: 300;
-  text-align: center;
+
+.tech-skills {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.desc {
-  font-weight: 200;
-  margin: 0.4em 0;
-  font-size: 2.2em;
-  color: #fff;
+
+.skills-name {
+  font-size: 15px;
+  font-family: poppins, sans-serif;
 }
 /*----------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------About Section-------------------------------------------------*/
-#about {
-  background-color: #29A0B1 !important;
+/* Contact */
+
+.card-section-contact {
+  width: 80%;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 200px;
+  background-color: #ade8f4;
+  padding: 80px;
+  border-radius: 10px;
+  color: white;
+  color: #000;
 }
+
+.contact-urls{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*--------------------------------------------------About Section-------------------------------------------------*/
 .page-section {
   padding: 8rem 0;
   display: flex;
@@ -334,107 +371,7 @@ body {
     line-height: 2.5rem;
   }
 }
-.about-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
 
-.lead {
-  text-align: center;
-  font-size: 1.3rem;
-}
-.lead-1 {
-  text-align: left;
-  font-size: 1rem;
-  font-style: italic;
-}
-.twitter-link {
-  color: aqua;
-  text-decoration: none !important;
-}
-/*-------------------------------------- Achievement Card */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.card {
-  margin: 12px;
-  padding: 12px;
-  width: 500px;
-  min-height: 100px;
-  display: grid;
-  grid-template-rows: 10px 25px 1fr 25px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
-}
-.card__exit,
-.card__icon {
-  position: relative;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-}
-.card__exit {
-  grid-row: 1/2;
-  justify-self: end;
-}
-
-.card__icon {
-  grid-row: 1/3;
-  font-size: 15px;
-}
-
-.card__title {
-  grid-row: 3/4;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 1.2rem;
-}
-.internship-description {
-  font-size: 15px;
-}
-
-/* CARD BACKGROUNDS */
-
-.card-1 {
-  background: radial-gradient(#1fe4f5, #3fbafe);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1600px) {
-  .cards {
-    justify-content: center;
-  }
-}
-
-/*--------------------------------------------------Skills Section-------------------------------------------------*/
-#skills {
-  background-color: #167D7F !important;
-}
-.skills-name {
-  font-size: 20px;
-  font-family: poppins, sans-serif;
-}
-@keyframes desc {
-  0% {
-    transform: rotateX(180deg);
-  }
-}
-
-.skill-icon {
-  padding-top: 40px;
-  font-size: 50px;
-}
-
-/*----------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------Contact Section-------------------------------------------------*/
 #contact {
   background-color: #98D7C2 !important;
@@ -464,6 +401,7 @@ body {
   margin-left: 0.25rem !important;
 }
 .copyright {
+  margin-top: 50px;
   background-color: #1a252f;
 }
 .p-4 {
