@@ -32,95 +32,89 @@
     <link rel="icon" href="./img/Logo2.jpg" type="image/icon type" />
   </head>
   <body>
-    <div class="header1">
-      <div class="menu-btn">
-        <span class="menu-btn__burger"></span>
-      </div>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">
+          <a href="#">Ayush Agarwal</a>
+        </div>
 
-      <nav class="nav">
-        <ul class="menu-nav">
-          <li class="menu-nav__item active">
-            <a href="index.html" class="menu-nav__link"> Home </a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="projects.html" class="menu-nav__link"> Projects </a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="blogs.html" class="menu-nav__link"> Blogs </a>
-          </li>
-        </ul>
+        <div class="navbar-right">
+          <a href="projects.html">Projects</a>
+          <a href="#skills-section">Skills</a>
+          <a href="#contact-section">Contact</a>
+        </div>
       </nav>
-    </div>
+    </header>
 
-    <!-- Intro Section -->
-    <div class="top-section">
-      <div class="intro">
-        <p class="name">Hi, I'm <span class="highlight">Ayush Agarwal</span></p>
-        <p class="bio">I code, write & travel.</p>
+    <div class="container">
+      <!-- Intro Section -->
+      <div class="top-section">
+        <div class="intro">
+          <p class="name">Hi, I'm <span class="highlight">Ayush Agarwal</span></p>
+          <p class="bio">I code, write & travel.</p>
+        </div>
+        <p class="about">
+          I am a Frontend Angular Developer based out of Bangalore, India. Presently working at Amadeus Software Labs,
+          Bangalore. I contribute on the feature development of core hotel booking platform used for millions of daily
+          bookings.
+        </p>
       </div>
-      <p class="about-new">
-        I am a Frontend Angular Developer based out of Bangalore, India. Presently working at Amadeus Software Labs,
-        Bangalore. I contribute on the feature development of core hotel booking platform used for millions of daily
-        bookings.
-      </p>
-    </div>
 
-    <!-- Skills -->
-    <div class="card-section">
-      <h2>Skills</h2>
-      <div class="tech-skills">
-        <div>
-          <span class="iconify" data-icon="logos:typescript-icon" data-width="50px"></span>
-          <p class="skills-name">Typescript</p>
-        </div>
-        <div>
-          <span class="iconify" data-icon="logos:angular-icon" data-width="50px"></span>
-          <p class="skills-name">Angular</p>
-        </div>
-        <div>
-          <span class="iconify" data-icon="vscode-icons:file-type-scss" data-width="50px"></span>
-          <p class="skills-name">SCSS</p>
-        </div>
-        <div>
-          <span class="iconify" data-icon="logos:jasmine" data-width="50px"></span>
-          <p class="skills-name">Jasmine</p>
+      <!-- Skills -->
+      <div class="card-section" id="skills-section">
+        <h2>Skills</h2>
+        <div class="tech-skills">
+          <div>
+            <span class="iconify" data-icon="logos:typescript-icon" data-width="50px"></span>
+            <p class="skills-name">Typescript</p>
+          </div>
+          <div>
+            <span class="iconify" data-icon="logos:angular-icon" data-width="50px"></span>
+            <p class="skills-name">Angular</p>
+          </div>
+          <div>
+            <span class="iconify" data-icon="vscode-icons:file-type-scss" data-width="50px"></span>
+            <p class="skills-name">SCSS</p>
+          </div>
+          <div>
+            <span class="iconify" data-icon="logos:jasmine" data-width="50px"></span>
+            <p class="skills-name">Jasmine</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Contact -->
-    <div class="card-section-contact">
-      <h2>Contact</h2>
-      <p>Let's Connect! Get in touch for an opportunity or just for a conversation on anything tech.</p>
-      <div class="contact-urls">
-        <div>
-          <a class="btn btn-outline-light contact-btn-icons" href="https://github.com/ayushhagarwal">
-            <i class="fab fa-github ic"></i>
-          </a>
-        </div>
-        <div>
-          <a class="btn btn-outline-light contact-btn-icons" href="https://www.linkedin.com/in/ayushdev24/">
-            <i class="fab fa-fw fa-linkedin-in ic"></i>
-          </a>
-        </div>
-        <div>
-          <a class="btn btn-outline-light contact-btn-icons" href="https://medium.com/@ayushgrwl365">
-            <i class="fab fa-fw fa-medium-m ic"></i>
-          </a>
-        </div>
-        <div>
-          <a class="btn btn-outline-light contact-btn-icons" href="mailto:reachatayush@gmail.com">
-            <i class="fas fa-envelope ic"></i>
-          </a>
+      <!-- Contact -->
+      <div class="card-section-contact" id="contact-section">
+        <h2>Contact</h2>
+        <p>Let's Connect! Get in touch for an opportunity or just for a conversation on anything tech.</p>
+        <div class="contact-urls">
+          <div>
+            <a class="btn btn-outline-light contact-btn-icons" href="https://github.com/ayushhagarwal">
+              <i class="fab fa-github ic"></i>
+            </a>
+          </div>
+          <div>
+            <a class="btn btn-outline-light contact-btn-icons" href="https://www.linkedin.com/in/ayushdev24/">
+              <i class="fab fa-fw fa-linkedin-in ic"></i>
+            </a>
+          </div>
+          <div>
+            <a class="btn btn-outline-light contact-btn-icons" href="https://medium.com/@ayushgrwl365">
+              <i class="fab fa-fw fa-medium-m ic"></i>
+            </a>
+          </div>
+          <div>
+            <a class="btn btn-outline-light contact-btn-icons" href="mailto:reachatayush@gmail.com">
+              <i class="fas fa-envelope ic"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
     <!-- Copyright Section -->
-    <section class="copyright py-4 text-center text-white">
-      <!-- <div class="container"> -->
+    <div class="copyright py-2 text-center text-white">
       <small>Ayush Kumar Agarwal &copy;Copyright2020 - Ꝏ</small>
-      <!-- </div> -->
-    </section>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
