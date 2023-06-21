@@ -53,6 +53,13 @@ header {
 .navbar-right a:hover {
   background-color: #d9caca;
 }
+
+@media (max-width: 768px) {
+  .navbar-left a{
+    display: none;
+  }
+}
+
 /*--------------------------------------------------Intro Section--------------------------------------------*/
 .top-section {
   text-align: left;
