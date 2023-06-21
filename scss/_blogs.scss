@@ -1,15 +1,10 @@
 .blogs {
   padding-bottom: 2rem;
+  background-color: #9b8a8a;
 
-  &__bio-image {
+  &__bio {
     height: 30vh;
     width: 100%;
-    background: linear-gradient(
-        to right,
-        rgba($primary-color, 0.9),
-        rgba($primary-color, 0.3)
-      ),
-      url("../img/ayush.jpg") center top;
     background-size: cover;
     display: flex;
     flex-direction: column;
