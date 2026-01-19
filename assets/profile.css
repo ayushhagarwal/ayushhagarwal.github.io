@@ -1,4 +1,8 @@
 /* Standard CSS */
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100%;
@@ -6,6 +10,7 @@ body {
   overscroll-behavior: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 200px;
   box-sizing: border-box;
   cursor: default;
 }
@@ -19,10 +24,15 @@ body {
 /*------------------------------------------------NAVBAR CSS--------------------------------------------------------------*/
 header {
   position: fixed;
-  top: 20px; /* Add desired top spacing here */
+  top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 70px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .navbar {
@@ -32,10 +42,12 @@ header {
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
+  height: 100%;
+  padding: 10px 0;
 }
 
 
-.navbar-left a{
+.navbar-left a {
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -45,17 +57,20 @@ header {
   color: #333;
   text-decoration: none;
   margin-left: 10px;
-  padding: 5px;
+  padding: 8px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .navbar-right a:hover {
-  background-color: #d9caca;
+  background-color: #48cae4;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .navbar-left a{
+  .navbar-left a {
     display: none;
   }
 }
@@ -67,17 +82,69 @@ header {
 }
 
 .intro {
-  font-size:xxx-large;
+  font-size: xxx-large;
   font-weight: 600;
   letter-spacing: 2px;
 }
-.highlight {
-  color: #b2d8d8; 
+
+.bio {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-.about{
+.highlight {
+  color: #48cae4;
+  font-weight: 700;
+}
+
+.about {
   width: 100%;
   font-weight: 300;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #48cae4;
+  color: #000;
+  border: 2px solid #48cae4;
+}
+
+.btn-primary:hover {
+  background-color: #90e0ef;
+  border-color: #90e0ef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 202, 228, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #48cae4;
+}
+
+.btn-secondary:hover {
+  background-color: #48cae4;
+  border-color: #48cae4;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 202, 228, 0.3);
 }
 
 
@@ -93,7 +160,7 @@ header {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 120px;
   background-color: #48cae4;
   padding: 80px;
   border-radius: 10px;
@@ -102,8 +169,9 @@ header {
 
 .card-section:hover {
   background-color: #90e0ef;
-  transform: scale(1.02);
-  transition: background-color 0.3s, transform 0.3s;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(72, 202, 228, 0.3);
 }
 
 .card-section h2 {
@@ -116,16 +184,107 @@ header {
 
 .tech-skills {
   margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-skills div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .skills-name {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   font-family: poppins, sans-serif;
+  margin-top: 8px;
 }
+
+/*------------------------------------------------CTA Section----------------------------------------------*/
+.cta-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 120px auto 150px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.cta-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #48cae4 0%, #90e0ef 100%);
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.cta-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(72, 202, 228, 0.4);
+  border-color: #48cae4;
+  background: linear-gradient(135deg, #90e0ef 0%, #ade8f4 100%);
+  color: #000;
+  text-decoration: none;
+}
+
+.cta-card:nth-child(2) {
+  background: linear-gradient(135deg, #a78bfa 0%, #c4b5fd 100%);
+}
+
+.cta-card:nth-child(2):hover {
+  background: linear-gradient(135deg, #c4b5fd 0%, #ddd6fe 100%);
+  border-color: #a78bfa;
+  box-shadow: 0 15px 35px rgba(167, 139, 250, 0.4);
+}
+
+.cta-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.cta-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.cta-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1a252f;
+  margin: 0;
+}
+
 /*----------------------------------------------------------------------------------------------------------------*/
 /* Contact */
 
@@ -133,7 +292,8 @@ header {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 120px;
+  margin-bottom: 80px;
   background-color: #ade8f4;
   padding: 80px;
   border-radius: 10px;
@@ -147,7 +307,7 @@ header {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-urls{
+.contact-urls {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -162,17 +322,121 @@ header {
   font-size: 2.25rem;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #333;
+}
+
+.contact-btn-icons:hover {
+  background-color: #48cae4;
+  border-color: #48cae4;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 16px rgba(72, 202, 228, 0.3);
+}
+
+.contact-btn-icons i {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-btn-icons:hover i {
+  color: #000;
 }
 
 /*--------------------------------------------------Footer Section-------------------------------------------------*/
 
-.copyright {
-  margin-top: 50px;
-  background-color: #1a252f;
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2c3e50;
+  padding: 15px 0;
+  color: #fff;
+  z-index: 999;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Responsiveness Code */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social a:hover {
+  color: #48cae4;
+  background-color: rgba(72, 202, 228, 0.2);
+  transform: translateY(-3px);
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-tagline {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+/*--------------------------------------------------Mobile Responsiveness-------------------------------------------------*/
 @media (max-width: 768px) {
+  /* Navbar */
+  header {
+    height: 60px;
+  }
+
+  /* CTA Buttons */
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    margin-bottom: 180px;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-card {
+    padding: 30px 20px;
+  }
+
   /* Skills */
   .card-section {
     width: 90%;
@@ -180,15 +444,9 @@ header {
   }
 
   .tech-skills {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tech-skills div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 15px;
+    max-width: 100%;
   }
 
   .iconify {
@@ -213,5 +471,20 @@ header {
 
   .contact-btn-icons {
     margin-bottom: 15px;
+  }
+
+  /* Footer */
+  .footer-content {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+
+  .footer-tagline {
+    text-align: center;
   }
 }
