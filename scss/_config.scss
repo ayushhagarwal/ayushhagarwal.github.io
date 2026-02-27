@@ -1,5 +1,5 @@
-$primary-color: #272727;
-$secondary-color: #ff652f;
+$primary-color: #f8f9fa;
+$secondary-color: #0891b2;
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,9 @@ $secondary-color: #ff652f;
 @function set-text-color($color) {
   @if (lightness($color) > 40%) {
     @return #000;
-  } @else {
+  }
+
+  @else {
     @return #fff;
   }
 }
@@ -24,11 +26,13 @@ $secondary-color: #ff652f;
     @content;
   }
 }
+
 @mixin media-lg {
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
+
 @mixin media-xl {
   @media screen and (min-width: 1600px) {
     @content;
