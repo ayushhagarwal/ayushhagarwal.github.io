@@ -64,6 +64,41 @@ function initNav() {
 }
 
 /* ──────────────────────────────────────────
+   1.1 DARK MODE TOGGLE
+   ────────────────────────────────────────── */
+function initThemeToggle() {
+  const toggle = document.getElementById('themeToggle');
+  if (!toggle) return;
+
+  // Get saved theme or default to light
+  const getTheme = () => localStorage.getItem('theme') || 'light';
+  
+  // Apply theme to document
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    // Update meta theme-color for mobile browsers
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute('content', theme === 'dark' ? '#0a0e1a' : '#f8f9fa');
+    }
+  };
+
+  // Toggle between light and dark
+  const toggleTheme = () => {
+    const current = getTheme();
+    const next = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+  };
+
+  // Apply saved theme on load
+  applyTheme(getTheme());
+
+  // Listen for toggle clicks
+  toggle.addEventListener('click', toggleTheme);
+}
+
+/* ──────────────────────────────────────────
    2. HEADER SCROLL SHADOW
    ────────────────────────────────────────── */
 function initHeaderScroll() {
@@ -188,6 +223,7 @@ function consoleEasterEgg() {
 async function boot() {
   await loadSections();
   initNav();
+  initThemeToggle();
   initHeaderScroll();
   initScrollSpy();
   initReveal();
