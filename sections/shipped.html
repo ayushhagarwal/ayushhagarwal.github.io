@@ -6,9 +6,22 @@
                 reason.</p>
         </header>
 
+        <!-- Project Tabs -->
+        <div class="project-tabs" role="tablist" aria-label="Filter projects by status">
+            <button class="project-tab" role="tab" aria-selected="false" data-filter="all">
+                All
+            </button>
+            <button class="project-tab is-active" role="tab" aria-selected="true" data-filter="shipped">
+                Shipped
+            </button>
+            <button class="project-tab" role="tab" aria-selected="false" data-filter="archived">
+                Archived
+            </button>
+        </div>
+
         <div class="projects-grid">
 
-            <article class="project-card reveal" aria-label="Project: Brewlytics">
+            <article class="project-card reveal" data-status="shipped" aria-label="Project: Brewlytics">
                 <div class="project-card__top">
                     <div class="project-card__icon" aria-hidden="true">
                         <img src="assets/project-icons/Brewlytics.png" alt="Brewlytics Icon"
@@ -41,7 +54,7 @@
                 </div>
             </article>
 
-            <article class="project-card reveal" aria-label="Project: OfficeComply">
+            <article class="project-card reveal" data-status="shipped" aria-label="Project: OfficeComply">
                 <div class="project-card__top">
                     <div class="project-card__icon" aria-hidden="true">
                         <img src="assets/project-icons/officeComply.png" alt="OfficeComply Icon"
@@ -74,7 +87,7 @@
                 </div>
             </article>
 
-            <article class="project-card reveal" aria-label="Project: SkinRitual">
+            <article class="project-card reveal" data-status="shipped" aria-label="Project: SkinRitual">
                 <div class="project-card__top">
                     <div class="project-card__icon" aria-hidden="true">
                         <img src="assets/project-icons/SkinRitual_Icon.png" alt="SkinRitual Icon"
@@ -107,7 +120,7 @@
                 </div>
             </article>
 
-            <article class="project-card reveal" aria-label="Project: SelfPact">
+            <article class="project-card reveal" data-status="shipped" aria-label="Project: SelfPact">
                 <div class="project-card__top">
                     <div class="project-card__icon" aria-hidden="true">
                         <img src="assets/project-icons/SelfPact.png" alt="SelfPact Icon"
@@ -140,7 +153,7 @@
                 </div>
             </article>
 
-            <article class="project-card reveal" aria-label="Project: PDF Contract Analyzer">
+            <article class="project-card reveal" data-status="archived" aria-label="Project: PDF Contract Analyzer">
                 <div class="project-card__top">
                     <div class="project-card__icon" aria-hidden="true">
                         <i class="fa-solid fa-file-contract"></i>

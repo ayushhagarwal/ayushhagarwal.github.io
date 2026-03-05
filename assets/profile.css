@@ -793,10 +793,55 @@ ol {
 /* ──────────────────────────────────────────
    9. THINGS I'VE SHIPPED
    ────────────────────────────────────────── */
+
+/* Project Tabs */
+.project-tabs {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-8);
+  padding: var(--sp-1);
+  background: var(--bg-raised);
+  border-radius: var(--r-lg);
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.project-tab {
+  padding: var(--sp-2) var(--sp-5);
+  background: transparent;
+  border: none;
+  border-radius: var(--r-md);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+  user-select: none;
+}
+
+.project-tab:hover {
+  background: var(--cyan-dim);
+  color: var(--text-primary);
+}
+
+.project-tab.is-active {
+  background: var(--bg-surface);
+  color: var(--cyan);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-5);
+}
+
+/* Hidden projects (for filtering) */
+.project-card.is-hidden {
+  display: none;
 }
 
 /* Project Card */
@@ -1535,6 +1580,18 @@ ol {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-tabs {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-tab {
+    flex: 1;
+    text-align: center;
+    padding: var(--sp-3) var(--sp-4);
+    font-size: 0.875rem;
   }
 
   .notes-grid {

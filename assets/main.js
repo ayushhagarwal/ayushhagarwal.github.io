@@ -209,7 +209,53 @@ function initRipple() {
 }
 
 /* ──────────────────────────────────────────
-   7. CONSOLE EASTER EGG
+   7. PROJECT FILTER TABS
+   ────────────────────────────────────────── */
+function initProjectTabs() {
+  const tabs = document.querySelectorAll('.project-tab');
+  const projects = document.querySelectorAll('.project-card');
+  if (!tabs.length || !projects.length) return;
+
+  const filterProjects = (filterValue) => {
+    projects.forEach(card => {
+      const status = card.getAttribute('data-status');
+      
+      // Show all cards if "all" is selected, otherwise match the status
+      if (filterValue === 'all' || status === filterValue) {
+        card.classList.remove('is-hidden');
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const filterValue = tab.getAttribute('data-filter');
+      
+      // Update active state
+      tabs.forEach(t => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      
+      // Filter projects
+      filterProjects(filterValue);
+    });
+  });
+
+  // Initialize with "shipped" filter (default)
+  const activeTab = document.querySelector('.project-tab.is-active');
+  if (activeTab) {
+    const defaultFilter = activeTab.getAttribute('data-filter');
+    filterProjects(defaultFilter);
+  }
+}
+
+/* ──────────────────────────────────────────
+   8. CONSOLE EASTER EGG
    ────────────────────────────────────────── */
 function consoleEasterEgg() {
   console.log('%cAyush Agarwal — Full-Stack Engineer', 'color:#63b3ed;font-size:18px;font-weight:800;font-family:monospace;');
@@ -229,6 +275,7 @@ async function boot() {
   initReveal();
   initSmoothScroll();
   initRipple();
+  initProjectTabs();
   consoleEasterEgg();
 }
 
