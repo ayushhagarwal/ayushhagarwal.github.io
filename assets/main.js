@@ -19,6 +19,7 @@ const SECTIONS = [
   { id: 'inject-hero',       src: './sections/hero.html'       },
   { id: 'inject-stack',      src: './sections/stack.html'      },
   { id: 'inject-shipped',    src: './sections/shipped.html'    },
+  { id: 'inject-open-source', src: './sections/open-source.html' },
   { id: 'inject-notes',      src: './sections/notes.html'      },
   { id: 'inject-philosophy', src: './sections/philosophy.html' },
   { id: 'inject-contact',    src: './sections/contact.html'    },

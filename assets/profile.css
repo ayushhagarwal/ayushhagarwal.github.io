@@ -1069,7 +1069,186 @@ ol {
 }
 
 /* ──────────────────────────────────────────
-   10. ENGINEERING NOTES (BLOG)
+   10. OPEN SOURCE
+   ────────────────────────────────────────── */
+.open-source {
+  padding-top: var(--sp-16);
+}
+
+.open-source .section__header {
+  margin-bottom: var(--sp-8);
+}
+
+.oss-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: var(--sp-8);
+  align-items: stretch;
+  background:
+    linear-gradient(135deg, var(--cyan-dim), transparent 42%),
+    var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color var(--dur-base) var(--ease),
+    box-shadow var(--dur-base) var(--ease),
+    transform var(--dur-base) var(--ease);
+}
+
+.oss-card::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+}
+
+.oss-card:hover {
+  border-color: rgba(8, 145, 178, 0.35);
+  box-shadow: var(--shadow-card), var(--shadow-glow-cyan);
+  transform: translateY(-4px);
+}
+
+.oss-card__content,
+.oss-card__panel {
+  position: relative;
+  z-index: 1;
+}
+
+.oss-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-6);
+}
+
+.oss-card__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+
+.oss-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--cyan-dim), var(--purple-dim));
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+
+.oss-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: 0.01em;
+  margin-bottom: var(--sp-1);
+}
+
+.oss-card__title {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.oss-card__hook {
+  max-width: 720px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: var(--sp-6);
+}
+
+.oss-card__features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.oss-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  min-height: 100%;
+  padding: var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-raised);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.oss-card__features i {
+  color: var(--cyan);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.oss-card__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  padding: var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+[data-theme="dark"] .oss-card__panel {
+  background: rgba(10, 14, 26, 0.36);
+}
+
+.oss-card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.oss-card__stat span {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.oss-card__stat strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.oss-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.oss-card__actions .project-link {
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ──────────────────────────────────────────
+   11. ENGINEERING NOTES (BLOG)
    ────────────────────────────────────────── */
 
 /* Featured article */
@@ -1494,6 +1673,20 @@ ol {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .oss-card {
+    grid-template-columns: 1fr;
+  }
+
+  .oss-card__panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .oss-card__actions {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+
   .notes-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1592,6 +1785,23 @@ ol {
     text-align: center;
     padding: var(--sp-3) var(--sp-4);
     font-size: 0.875rem;
+  }
+
+  .oss-card {
+    padding: var(--sp-6);
+  }
+
+  .oss-card__top {
+    flex-direction: column;
+  }
+
+  .oss-card__features,
+  .oss-card__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .oss-card__actions {
+    flex-direction: column;
   }
 
   .notes-grid {
