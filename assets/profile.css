@@ -1079,6 +1079,11 @@ ol {
   margin-bottom: var(--sp-8);
 }
 
+.oss-list {
+  display: grid;
+  gap: var(--sp-6);
+}
+
 .oss-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
@@ -1145,6 +1150,13 @@ ol {
   color: var(--cyan);
   font-size: 1.45rem;
   flex-shrink: 0;
+}
+
+.oss-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .oss-card__eyebrow {
