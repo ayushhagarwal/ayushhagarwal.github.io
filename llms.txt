@@ -1,0 +1,26 @@
+# Ayush Agarwal
+
+> Ayush Agarwal is a full-stack engineer based in Bangalore, India, working on distributed systems at global scale and shipping side projects with AI-native workflows. Main stack: Java, Spring Boot, Angular, and prompt engineering.
+
+## Open source
+
+- [ASOpulse](https://github.com/ayushhagarwal/asopulse): A self-hosted App Store keyword workspace for tracking daily rankings and researching keywords
+- [StaySpan](https://github.com/ayushhagarwal/stayspan): A local-first Chrome extension that turns hotel confirmation pages into one private stay timeline
+- [Markdown Lens](https://markdownlens.ayushdev.com/): A privacy-first online Markdown editor and viewer with GitHub-style previews
+
+## Apps
+
+- [XML Lens](https://xmllens.ayushdev.com/): XSD viewer, XML to Markdown converter, and XML workspace for Mac
+- [Buddha Daily](https://buddhadaily.ayushdev.com/): One short Buddhist teaching each day for iPhone and iPad
+- [DiveAtlas](https://diveatlas.ayushdev.com/): Scuba dive logbook for iPhone and iPad
+- [GarageLog](https://garagelog.ayushdev.com/): Car maintenance tracker for iPhone and iPad
+- [OfficeComply](https://office-comply.ayushdev.com/): Private RTO and hybrid office attendance tracker for iPhone
+- [SkinRitual](https://skin-ritual.ayushdev.com/): Skincare routine planner and tracker for iPhone
+- [Fiberly](https://fiberly.ayushdev.com/): Daily fiber tracker for iPhone and iPad
+- [Bonely](https://bonely.app/): Calcium tracker for iPhone
+
+## Elsewhere
+
+- [GitHub](https://github.com/ayushhagarwal)
+- [Medium](https://medium.com/@ayushgrwl365): Articles on Angular, TypeScript, and AI-assisted development
+- Email: reachatayush@gmail.com

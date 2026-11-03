@@ -11,17 +11,66 @@
     content="Shipping real products at scale. Java · Spring Boot · Angular · AI workflows." />
   <meta name="theme-color" content="#f8f9fa" />
   <title>Ayush Agarwal — Full-Stack Engineer</title>
+  <link rel="canonical" href="https://ayushdev.com/" />
+  <meta name="author" content="Ayush Agarwal" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://ayushdev.com/" />
+  <meta property="og:site_name" content="Ayush Agarwal" />
+  <meta property="og:image" content="https://ayushdev.com/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta property="og:image:alt" content="Ayush Agarwal logo" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ayush Agarwal — Full-Stack Engineer" />
+  <meta name="twitter:description" content="Shipping real products at scale. Java · Spring Boot · Angular · AI workflows." />
+  <meta name="twitter:image" content="https://ayushdev.com/img/og-image.jpg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://ayushdev.com/#person",
+          "name": "Ayush Agarwal",
+          "alternateName": "Ayush Kumar Agarwal",
+          "url": "https://ayushdev.com/",
+          "jobTitle": "Full-Stack Engineer",
+          "email": "mailto:reachatayush@gmail.com",
+          "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN" },
+          "sameAs": ["https://github.com/ayushhagarwal", "https://medium.com/@ayushgrwl365"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ayushdev.com/#website",
+          "name": "Ayush Agarwal",
+          "url": "https://ayushdev.com/",
+          "author": { "@id": "https://ayushdev.com/#person" }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://ayushdev.com/#webpage",
+          "url": "https://ayushdev.com/",
+          "name": "Ayush Agarwal — Full-Stack Engineer",
+          "isPartOf": { "@id": "https://ayushdev.com/#website" },
+          "mainEntity": { "@id": "https://ayushdev.com/#person" }
+        }
+      ]
+    }
+  </script>
 
   <!-- Fonts: Manrope (UI) + JetBrains Mono (code/labels) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
 
-  <!-- Icons: FontAwesome + Iconify (loaded sync so icons render after fetch injection) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <!-- Icons: FontAwesome + Iconify -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" />
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"
+    integrity="sha384-0hGaYFpkH1NNsoc+YHpZgNukAauNlJMXJt0rYiIuf2vwB2k4QIEpkf2PoWw82mB+" crossorigin="anonymous"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/profile.css" />
@@ -32,20 +81,581 @@
 
 <body>
 
-  <!-- Section partials are fetched and injected by main.js -->
-  <div id="inject-nav"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    <div id="inject-hero"></div>
-    <div id="inject-stack"></div>
-    <!-- <div id="inject-shipped"></div> -->
-    <div id="inject-open-source"></div>
-    <div id="inject-notes"></div>
-    <div id="inject-philosophy"></div>
-    <div id="inject-contact"></div>
+  <header class="header" id="header">
+      <nav class="nav" aria-label="Primary navigation">
+          <a href="#hero" class="nav__logo">
+              <span class="nav__logo-mark">A</span>yush<span class="nav__logo-dot">.</span>
+          </a>
+
+          <ul class="nav__links" id="navLinks" role="list">
+              <li><a href="#stack" class="nav__link">Stack</a></li>
+              <!-- <li><a href="#shipped" class="nav__link">Built</a></li> -->
+              <li><a href="#open-source" class="nav__link">Open Source</a></li>
+              <li><a href="#notes" class="nav__link">Notes</a></li>
+              <li><a href="#philosophy" class="nav__link">Philosophy</a></li>
+              <li><a href="#contact" class="nav__link nav__link--cta">Let's Talk</a></li>
+          </ul>
+
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+              <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+              <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+          </button>
+
+          <button class="nav__burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">
+              <span></span><span></span><span></span>
+          </button>
+      </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+        <div class="wrap">
+
+            <h1 class="hero__heading" id="hero-heading">
+                Full-stack engineer<br>
+                <em class="hero__heading-em">shipping real products.</em>
+            </h1>
+
+            <p class="hero__bio">
+                I'm <strong>Ayush Agarwal</strong> — based in Bangalore. By day I solve distributed-systems
+                problems at global scale; by night I ship side projects, integrate AI workflows, and explore
+                new countries. <span class="hero__bio-mono">Java · Spring Boot · Angular · Prompt Engineering.</span>
+            </p>
+
+            <div class="hero__actions">
+                <!-- <a href="#shipped" class="btn btn--primary">
+                    View my work <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+                </a> -->
+                <a href="#contact" class="btn btn--ghost">
+                    Get in touch <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="hero__social" role="list" aria-label="Social links">
+                <li>
+                    <a href="https://github.com/ayushhagarwal" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@ayushgrwl365" target="_blank" rel="noopener noreferrer"
+                        aria-label="Medium">
+                        <i class="fa-brands fa-medium"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <section class="stack section" id="stack" aria-labelledby="stack-heading">
+        <div class="wrap">
+            <header class="section__header">
+                <h2 class="section__title" id="stack-heading">Engineering Stack</h2>
+                <p class="section__sub">The systems I build with and the AI layer on top.</p>
+            </header>
+
+            <div class="stack__cols">
+
+                <!-- Column 1: Full-Stack Systems -->
+                <div class="stack__col reveal">
+                    <h3 class="stack__col-title">
+                        <span class="stack__col-icon" aria-hidden="true">⚙️</span>
+                        Full Stack Systems
+                    </h3>
+                    <ul class="tech-list" role="list">
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:java" data-width="22"></span>
+                            <span>Java</span>
+                        </li>
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:spring-icon" data-width="22"></span>
+                            <span>Spring Boot</span>
+                        </li>
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:typescript-icon" data-width="22"></span>
+                            <span>TypeScript</span>
+                        </li>
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:angular-icon" data-width="22"></span>
+                            <span>Angular</span>
+                        </li>
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:reactivex" data-width="22"></span>
+                            <span>RxJS</span>
+                        </li>
+                        <li class="tech-chip">
+                            <span class="iconify tech-chip__icon" data-icon="logos:jest" data-width="22"></span>
+                            <span>Jest</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: AI-Native Workflow -->
+                <div class="stack__col stack__col--ai reveal">
+                    <h3 class="stack__col-title">
+                        <span class="stack__col-icon" aria-hidden="true">🤖</span>
+                        AI-Native Workflow
+                    </h3>
+                    <ul class="tech-list" role="list">
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="iconify tech-chip__icon" data-icon="logos:claude-icon" data-width="22"></span>
+                            <span>Claude</span>
+                        </li>
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="tech-chip__emoji" aria-hidden="true">🤖</span>
+                            <span>GitHub Copilot</span>
+                        </li>
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="tech-chip__emoji" aria-hidden="true">🎯</span>
+                            <span>Prompt Engineering</span>
+                        </li>
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="tech-chip__emoji" aria-hidden="true">⚡</span>
+                            <span>LLM Integration</span>
+                        </li>
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="tech-chip__emoji" aria-hidden="true">🧠</span>
+                            <span>Agentic Systems</span>
+                        </li>
+                        <li class="tech-chip tech-chip--ai">
+                            <span class="tech-chip__emoji" aria-hidden="true">📐</span>
+                            <span>AI-assisted Design</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="open-source section" id="open-source" aria-labelledby="open-source-heading">
+        <div class="wrap">
+            <header class="section__header">
+                <h2 class="section__title" id="open-source-heading">Open Source</h2>
+                <p class="section__sub">Public tools I ship with the same care as production products.</p>
+            </header>
+
+            <div class="oss-list">
+            <article class="oss-card reveal" aria-label="Open source project: ASOpulse">
+                <div class="oss-card__content">
+                    <div class="oss-card__top">
+                        <div class="oss-card__identity">
+                            <div class="oss-card__icon" aria-hidden="true">
+                                <img src="assets/project-icons/asopulse.svg" alt="" width="54" height="54">
+                            </div>
+                            <div>
+                                <p class="oss-card__eyebrow">ASO workspace · Rank tracker · Self-hosted</p>
+                                <h3 class="oss-card__title">ASOpulse</h3>
+                            </div>
+                        </div>
+                        <span class="badge badge--live" role="img" aria-label="Status: Open source">
+                            <span class="badge__dot"></span> Open Source
+                        </span>
+                    </div>
+
+                    <p class="oss-card__hook">
+                        A transparent, self-hosted App Store keyword workspace for tracking daily rankings,
+                        researching keywords, and understanding every signal without invented search-volume metrics.
+                    </p>
+
+                    <ul class="oss-card__features" role="list" aria-label="ASOpulse highlights">
+                        <li>
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                            Daily ranks, movement, sparklines, and history
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                            Research grounded in public App Store results
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-server" aria-hidden="true"></i>
+                            Self-hosted, inspectable, and telemetry-free by default
+                        </li>
+                    </ul>
+
+                    <ul class="tag-list" role="list" aria-label="Technologies">
+                        <li class="tag">React</li>
+                        <li class="tag">TypeScript</li>
+                        <li class="tag">Fastify</li>
+                        <li class="tag">PostgreSQL</li>
+                        <li class="tag">Redis</li>
+                    </ul>
+                </div>
+
+                <div class="oss-card__panel" aria-label="Project links">
+                    <div class="oss-card__stat">
+                        <span>Focus</span>
+                        <strong>App Store keyword intelligence</strong>
+                    </div>
+                    <div class="oss-card__stat">
+                        <span>License</span>
+                        <strong>AGPL-3.0</strong>
+                    </div>
+                    <div class="oss-card__actions">
+                        <a href="https://github.com/ayushhagarwal/asopulse" target="_blank" rel="noopener noreferrer"
+                            class="project-link" title="View ASOpulse on GitHub" aria-label="Source code for ASOpulse on GitHub">
+                            Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/ayushhagarwal/asopulse/releases" target="_blank"
+                            rel="noopener noreferrer" class="project-link" title="View ASOpulse releases">
+                            Releases <i class="fa-solid fa-tag" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="oss-card reveal" aria-label="Open source project: StaySpan">
+                <div class="oss-card__content">
+                    <div class="oss-card__top">
+                        <div class="oss-card__identity">
+                            <div class="oss-card__icon" aria-hidden="true">
+                                <img src="assets/project-icons/stayspan.svg" alt="" width="54" height="54">
+                            </div>
+                            <div>
+                                <p class="oss-card__eyebrow">Chrome extension · Travel organizer · Local-first</p>
+                                <h3 class="oss-card__title">StaySpan</h3>
+                            </div>
+                        </div>
+                        <span class="badge badge--live" role="img" aria-label="Status: Open source">
+                            <span class="badge__dot"></span> Open Source
+                        </span>
+                    </div>
+
+                    <p class="oss-card__hook">
+                        A local-first Chrome extension that turns scattered hotel confirmation pages into one private
+                        timeline for stays, cancellation deadlines, check-in details, addresses, and contacts.
+                    </p>
+
+                    <ul class="oss-card__features" role="list" aria-label="StaySpan highlights">
+                        <li>
+                            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                            Deterministic extraction with confidence checks
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-route" aria-hidden="true"></i>
+                            Consecutive stays organized into trip timelines
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                            No account, backend, telemetry, or remote AI
+                        </li>
+                    </ul>
+
+                    <ul class="tag-list" role="list" aria-label="Technologies">
+                        <li class="tag">React</li>
+                        <li class="tag">TypeScript</li>
+                        <li class="tag">Chrome MV3</li>
+                        <li class="tag">Vite</li>
+                    </ul>
+                </div>
+
+                <div class="oss-card__panel" aria-label="Project links">
+                    <div class="oss-card__stat">
+                        <span>Focus</span>
+                        <strong>Private hotel trip timelines</strong>
+                    </div>
+                    <div class="oss-card__stat">
+                        <span>Status</span>
+                        <strong>Active early development</strong>
+                    </div>
+                    <div class="oss-card__actions">
+                        <a href="https://github.com/ayushhagarwal/stayspan" target="_blank" rel="noopener noreferrer"
+                            class="project-link" title="View StaySpan on GitHub" aria-label="Source code for StaySpan on GitHub">
+                            Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/ayushhagarwal/stayspan#install-locally" target="_blank"
+                            rel="noopener noreferrer" class="project-link" title="Read StaySpan installation steps">
+                            Install locally <i class="fa-solid fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="oss-card reveal" aria-label="Open source project: Markdown Lens">
+                <div class="oss-card__content">
+                    <div class="oss-card__top">
+                        <div class="oss-card__identity">
+                            <div class="oss-card__icon" aria-hidden="true">
+                                <i class="fa-brands fa-markdown"></i>
+                            </div>
+                            <div>
+                                <p class="oss-card__eyebrow">Markdown editor · Viewer · Developer tool</p>
+                                <h3 class="oss-card__title">Markdown Lens</h3>
+                            </div>
+                        </div>
+                        <span class="badge badge--live" role="img" aria-label="Status: Open source">
+                            <span class="badge__dot"></span> Open Source
+                        </span>
+                    </div>
+
+                    <p class="oss-card__hook">
+                        A privacy-first online Markdown editor and viewer for READMEs, AI notes, docs, changelogs,
+                        Mermaid diagrams, math, code blocks, and polished GitHub-style previews.
+                    </p>
+
+                    <ul class="oss-card__features" role="list" aria-label="Markdown Lens highlights">
+                        <li>
+                            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            Live split editor and preview
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            Drafts stay local in the browser
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                            Mermaid, KaTeX, GFM, and syntax highlighting
+                        </li>
+                    </ul>
+
+                    <ul class="tag-list" role="list" aria-label="Technologies">
+                        <li class="tag">Next.js</li>
+                        <li class="tag">TypeScript</li>
+                        <li class="tag">Tailwind CSS</li>
+                        <li class="tag">React Markdown</li>
+                    </ul>
+                </div>
+
+                <div class="oss-card__panel" aria-label="Project links">
+                    <div class="oss-card__stat">
+                        <span>Focus</span>
+                        <strong>Markdown UX</strong>
+                    </div>
+                    <div class="oss-card__stat">
+                        <span>Privacy</span>
+                        <strong>No upload flow</strong>
+                    </div>
+                    <div class="oss-card__actions">
+                        <a href="https://markdownlens.ayushdev.com/" target="_blank" rel="noopener noreferrer"
+                            class="project-link" title="Open Markdown Lens">
+                            Launch tool <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/ayushhagarwal/markdown-lens" target="_blank" rel="noopener noreferrer"
+                            class="project-link" title="View Markdown Lens on GitHub" aria-label="Source code for Markdown Lens on GitHub">
+                            Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </div>
+    </section>
+    <section class="notes section" id="notes" aria-labelledby="notes-heading">
+        <div class="wrap">
+            <header class="section__header">
+                <h2 class="section__title" id="notes-heading">Engineering Notes</h2>
+                <p class="section__sub">Articles I've written — published on Medium. Deep dives, lessons from production,
+                    and things I wish I'd known earlier.</p>
+            </header>
+
+            <!-- Featured Article -->
+            <article class="note-featured reveal" aria-label="Featured article">
+                <div class="note-featured__meta">
+                    <span class="note-cat note-cat--ai">AI</span>
+                    <span class="note-reading-time">
+                        <i class="fa-regular fa-clock" aria-hidden="true"></i> 9 min read
+                    </span>
+                </div>
+                <h3 class="note-featured__title">
+                    <a href="https://medium.com/@ayushgrwl365/my-experience-using-ai-as-a-full-stack-developer-in-a-large-company-c67a0cefff58"
+                        target="_blank" rel="noopener noreferrer">
+                        My Experience Using AI as a Full-Stack Developer in a Large Company
+                    </a>
+                </h3>
+                <p class="note-featured__excerpt">
+                    AI hasn't replaced my job — it's made me faster, more efficient, and better at what I do. A realistic
+                    take on AI in production software engineering.
+                </p>
+                <div class="note-featured__footer">
+                    <time datetime="2025-12-15" class="note-date">Dec 15, 2025</time>
+                    <a href="https://medium.com/@ayushgrwl365/my-experience-using-ai-as-a-full-stack-developer-in-a-large-company-c67a0cefff58"
+                        target="_blank" rel="noopener noreferrer" class="note-featured__cta">
+                        Read article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article Grid -->
+            <div class="notes-grid">
+
+                <article class="note-card reveal">
+                    <div class="note-card__meta">
+                        <span class="note-cat note-cat--ts">Angular</span>
+                        <span class="note-reading-time">
+                            <i class="fa-regular fa-clock" aria-hidden="true"></i> 7 min
+                        </span>
+                    </div>
+                    <h3 class="note-card__title">
+                        <a href="https://medium.com/@ayushgrwl365/how-to-share-data-between-components-in-angular-without-a-parent-child-relationship-45f38e8c0b6c"
+                            target="_blank" rel="noopener noreferrer">
+                            How to Share Data Between Components in Angular Without a Parent-Child Relationship
+                        </a>
+                    </h3>
+                    <p class="note-card__excerpt">
+                        Sharing data between components in Angular is essential for building dynamic and interactive
+                        applications. While the parent-child relationship is a common method for data sharing, there are
+                        scenarios where components are not directly related in the component hierarchy.
+                    </p>
+                    <time datetime="2024-11-28" class="note-date">Nov 28, 2024</time>
+                </article>
+
+                <article class="note-card reveal">
+                    <div class="note-card__meta">
+                        <span class="note-cat note-cat--ai">AI</span>
+                        <span class="note-reading-time">
+                            <i class="fa-regular fa-clock" aria-hidden="true"></i> 7 min
+                        </span>
+                    </div>
+                    <h3 class="note-card__title">
+                        <a href="https://medium.com/@ayushgrwl365/the-one-file-that-made-github-copilot-10-more-useful-daa2cf246bfe"
+                            target="_blank" rel="noopener noreferrer">
+                            The One File That Made GitHub Copilot 10× More Useful
+                        </a>
+                    </h3>
+                    <p class="note-card__excerpt">
+                        GitHub Copilot becomes dramatically more useful when you teach it your codebase rules instead of
+                        expecting it to guess.
+                    </p>
+                    <time datetime="2025-12-22" class="note-date">Dec 22, 2025</time>
+                </article>
+
+                <article class="note-card reveal">
+                    <div class="note-card__meta">
+                        <span class="note-cat note-cat--ts">Angular</span>
+                        <span class="note-reading-time">
+                            <i class="fa-regular fa-clock" aria-hidden="true"></i> 11 min
+                        </span>
+                    </div>
+                    <h3 class="note-card__title">
+                        <a href="https://medium.com/@ayushgrwl365/advanced-enum-techniques-in-angular-typescript-projects-elevating-code-clarity-6b0a654fa29d"
+                            target="_blank" rel="noopener noreferrer">
+                            Advanced Enum Techniques in Angular TypeScript Projects: Elevating Code Clarity
+                        </a>
+                    </h3>
+                    <p class="note-card__excerpt">
+                        Deep dive into advanced enum concepts and techniques that will elevate your enum usage in Angular
+                        applications to the next level.
+                    </p>
+                    <time datetime="2023-10-05" class="note-date">Oct 5, 2023</time>
+                </article>
+
+            </div>
+
+            <div class="section__footer">
+                <a href="https://medium.com/@ayushgrwl365" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+                    All articles on Medium <i class="fa-brands fa-medium" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <section class="philosophy section" id="philosophy" aria-labelledby="philosophy-heading">
+        <div class="wrap">
+            <header class="section__header">
+                <h2 class="section__title" id="philosophy-heading">How I Work</h2>
+                <p class="section__sub">Three principles that guide every project I touch.</p>
+            </header>
+
+            <ol class="philosophy-list" role="list">
+                <li class="philosophy-item reveal">
+                    <span class="philosophy-item__num" aria-hidden="true">01</span>
+                    <div>
+                        <h3 class="philosophy-item__title">Ship first. Polish with feedback.</h3>
+                        <p class="philosophy-item__text">
+                            Real users reveal what no spec doc can. I get working software into production quickly,
+                            then iterate on what the data and users actually ask for — not what I imagine they'll need.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="philosophy-item reveal">
+                    <span class="philosophy-item__num" aria-hidden="true">02</span>
+                    <div>
+                        <h3 class="philosophy-item__title">Use AI as a force multiplier, not a crutch.</h3>
+                        <p class="philosophy-item__text">
+                            Claude and Copilot handle scaffolding, brainstorming, and boilerplate. I focus on
+                            architecture, product reasoning, and the tradeoffs that actually matter. LLMs don't
+                            replace senior judgement — they give you more time to exercise it.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="philosophy-item reveal">
+                    <span class="philosophy-item__num" aria-hidden="true">03</span>
+                    <div>
+                        <h3 class="philosophy-item__title">Code for the engineer who inherits it.</h3>
+                        <p class="philosophy-item__text">
+                            Readability and intentional structure are not "nice to haves". The code I write today
+                            is a debt or an asset for whoever touches it next — including future me at 2am during
+                            an incident.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+        <div class="wrap">
+            <header class="section__header section__header--center">
+                <h2 class="section__title" id="contact-heading">Let's build something.</h2>
+                <p class="section__sub">
+                    Open to collaborations, consulting, and interesting conversations about engineering.
+                </p>
+            </header>
+
+            <div class="contact-grid">
+                <a href="https://github.com/ayushhagarwal" target="_blank" rel="noopener noreferrer"
+                    class="contact-card reveal">
+                    <i class="fa-brands fa-github contact-card__icon" aria-hidden="true"></i>
+                    <span class="contact-card__label">GitHub</span>
+                    <span class="contact-card__sub">Explore my code</span>
+                </a>
+
+                <a href="https://medium.com/@ayushgrwl365" target="_blank" rel="noopener noreferrer"
+                    class="contact-card reveal">
+                    <i class="fa-brands fa-medium contact-card__icon" aria-hidden="true"></i>
+                    <span class="contact-card__label">Medium</span>
+                    <span class="contact-card__sub">Engineering articles</span>
+                </a>
+
+                <a href="mailto:reachatayush@gmail.com" class="contact-card reveal">
+                    <i class="fa-regular fa-envelope contact-card__icon" aria-hidden="true"></i>
+                    <span class="contact-card__label">Email</span>
+                    <span class="contact-card__sub">reachatayush@gmail.com</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
   </main>
 
-  <div id="inject-footer"></div>
+  <footer class="footer">
+      <div class="wrap footer__inner">
+          <span class="footer__copy">© 2026 Ayush Agarwal</span>
+          <span class="footer__tagline">Building. Learning. Exploring.</span>
+          <ul class="footer__social" role="list" aria-label="Social links">
+              <li>
+                  <a href="https://github.com/ayushhagarwal" target="_blank" rel="noopener noreferrer"
+                      aria-label="GitHub">
+                      <i class="fa-brands fa-github"></i>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://medium.com/@ayushgrwl365" target="_blank" rel="noopener noreferrer"
+                      aria-label="Medium">
+                      <i class="fa-brands fa-medium"></i>
+                  </a>
+              </li>
+              <li>
+                  <a href="mailto:reachatayush@gmail.com" aria-label="Email">
+                      <i class="fa-regular fa-envelope"></i>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </footer>
 
   <script src="./assets/main.js"></script>
 

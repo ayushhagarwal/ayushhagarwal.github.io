@@ -2,48 +2,11 @@
  * AYUSH AGARWAL — Portfolio v2
  * Vanilla JS only. No jQuery. No frameworks.
  *
- * Sections are fetched as HTML partials and injected into the page
- * before any interactivity is initialised.
+ * All sections are written directly in index.html so crawlers and
+ * no-JS visitors see the full page; this script only adds interactivity.
  */
 
 'use strict';
-
-/* ──────────────────────────────────────────
-   SECTION LOADER
-   Fetch HTML partials in parallel, inject
-   them into their placeholder divs, then
-   trigger Iconify to scan the new nodes.
-   ────────────────────────────────────────── */
-const SECTIONS = [
-  { id: 'inject-nav',        src: './sections/nav.html'        },
-  { id: 'inject-hero',       src: './sections/hero.html'       },
-  { id: 'inject-stack',      src: './sections/stack.html'      },
-  { id: 'inject-shipped',    src: './sections/shipped.html'    },
-  { id: 'inject-open-source', src: './sections/open-source.html' },
-  { id: 'inject-notes',      src: './sections/notes.html'      },
-  { id: 'inject-philosophy', src: './sections/philosophy.html' },
-  { id: 'inject-contact',    src: './sections/contact.html'    },
-  { id: 'inject-footer',     src: './sections/footer.html'     },
-];
-
-async function loadSections() {
-  await Promise.all(
-    SECTIONS.map(({ id, src }) =>
-      fetch(src)
-        .then(r => {
-          if (!r.ok) throw new Error(`[sections] ${src} → HTTP ${r.status}`);
-          return r.text();
-        })
-        .then(html => {
-          const el = document.getElementById(id);
-          if (el) el.innerHTML = html;
-        })
-        .catch(err => console.warn(err))
-    )
-  );
-  // Re-scan for Iconify elements injected via fetch
-  if (window.Iconify) window.Iconify.scan();
-}
 
 /* ──────────────────────────────────────────
    1. MOBILE NAVIGATION
@@ -265,10 +228,9 @@ function consoleEasterEgg() {
 }
 
 /* ──────────────────────────────────────────
-   BOOT — load sections, then init everything
+   BOOT — init everything
    ────────────────────────────────────────── */
-async function boot() {
-  await loadSections();
+function boot() {
   initNav();
   initThemeToggle();
   initHeaderScroll();

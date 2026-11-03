@@ -1864,3 +1864,23 @@ ol {
     padding: var(--sp-6);
   }
 }
+
+/* Skip link: hidden until focused by keyboard */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--sp-2);
+  z-index: 1000;
+  padding: var(--sp-2) var(--sp-4);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: var(--sp-2);
+}
